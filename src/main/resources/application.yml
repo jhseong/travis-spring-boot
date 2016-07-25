@@ -1,0 +1,33 @@
+---
+spring:
+  profiles: local
+
+  jpa:
+      database: mysql
+      show-sql: true
+      hibernate:
+        ddl-auto: create-drop
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/travisdb?autoReconnect=true
+    driver-class-name: com.mysql.jdbc.Driver
+    username: ${MYSQL_TRAVISDB_USERNAME}
+    password: ${MYSQL_TRAVISDB_PASSWORD}
+
+
+
+---
+spring:
+  profiles: development
+
+  jpa:
+      database: mysql
+      show-sql: true
+      hibernate:
+        ddl-auto: create-drop
+
+  datasource:
+    url: jdbc:mysql://sjh-dev-db.cbopabdh50kn.ap-northeast-2.rds.amazonaws.com:3306/travisdb?autoReconnect=true
+    driver-class-name: com.mysql.jdbc.Driver
+    username: ${MYSQL_TRAVISDB_USERNAME}
+    password: ${MYSQL_TRAVISDB_PASSWORD}
