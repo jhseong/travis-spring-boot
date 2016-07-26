@@ -12,7 +12,7 @@ env:
     - TERM=dumb
 
 script:
-  - SPRING_PROFILES_ACTIVE=${PROFILE} ./gradlew clean build
+  - SPRING_PROFILES_ACTIVE=${PROFILE} ./gradlew clean check
 
 notifications:
   email: false
