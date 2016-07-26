@@ -14,7 +14,7 @@ env:
     PROFILE=development
 
 script:
-  - ./gradlew clean build -Dspring.profiles.active=${PROFILE}
+  - SPRING_PROFILES_ACTIVE=${PROFILE} ./gradlew clean build
 
 notifications:
   email: false
