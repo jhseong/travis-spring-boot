@@ -8,8 +8,10 @@ jdk:
 install: false
 
 env:
+  global:
+    - TERM=dumb
   matrix:
-    - PROFILE=development
+    PROFILE=development
 
 script:
   - ./gradlew clean build -Dspring.profiles.active=${PROFILE}
