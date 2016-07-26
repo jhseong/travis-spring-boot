@@ -10,8 +10,6 @@ install: false
 env:
   global:
     - TERM=dumb
-  matrix:
-    PROFILE=development
 
 script:
   - SPRING_PROFILES_ACTIVE=${PROFILE} ./gradlew clean build
