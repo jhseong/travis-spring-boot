@@ -1,0 +1,18 @@
+language: java
+
+sudo: false
+
+jdk:
+  - oraclejdk8
+
+install: false
+
+env:
+  matrix:
+    - PROFILE=development
+
+script:
+  - ./gradlew clean build -Dspring.profiles.active=${PROFILE}
+
+notifications:
+  email: false
